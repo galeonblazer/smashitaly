@@ -1,0 +1,1583 @@
+/**************************
+*
+*	GENERAL
+*
+**************************/
+/* line 6, ../style/sass/camera.scss */
+.camera_wrap a, .camera_wrap img,
+.camera_wrap ol, .camera_wrap ul, .camera_wrap li,
+.camera_wrap table, .camera_wrap tbody, .camera_wrap tfoot, .camera_wrap thead, .camera_wrap tr, .camera_wrap th, .camera_wrap td
+.camera_thumbs_wrap a, .camera_thumbs_wrap img,
+.camera_thumbs_wrap ol, .camera_thumbs_wrap ul, .camera_thumbs_wrap li,
+.camera_thumbs_wrap table, .camera_thumbs_wrap tbody, .camera_thumbs_wrap tfoot, .camera_thumbs_wrap thead, .camera_thumbs_wrap tr, .camera_thumbs_wrap th, .camera_thumbs_wrap td {
+  background: none;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  list-style: none;
+}
+
+/* line 21, ../style/sass/camera.scss */
+.camera_wrap {
+  display: none;
+  float: left;
+  position: relative;
+  z-index: 0;
+}
+
+/* line 27, ../style/sass/camera.scss */
+.camera_wrap img {
+  max-width: none !important;
+}
+
+/* line 30, ../style/sass/camera.scss */
+.camera_fakehover {
+  height: 100%;
+  min-height: 60px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 37, ../style/sass/camera.scss */
+.camera_wrap {
+  width: 100%;
+}
+
+/* line 40, ../style/sass/camera.scss */
+.camera_src {
+  display: none;
+}
+
+/* line 43, ../style/sass/camera.scss */
+.cameraCont, .cameraContents {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 49, ../style/sass/camera.scss */
+.cameraSlide {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* line 57, ../style/sass/camera.scss */
+.cameraContent {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* line 66, ../style/sass/camera.scss */
+.camera_target {
+  display: none;
+  bottom: 0;
+  /*height: 100%;    */
+  /*gallery*/
+  /*position: absolute; */
+  /*gallery*/
+  left: 0;
+  overflow: hidden;
+  right: 0;
+  text-align: left;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+/* line 79, ../style/sass/camera.scss */
+.camera_overlayer {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+/* line 90, ../style/sass/camera.scss */
+.camera_target_content {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+/* line 99, ../style/sass/camera.scss */
+.camera_target_content .camera_link {
+  background: url(../images/blank.gif);
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* line 105, ../style/sass/camera.scss */
+.camera_loader {
+  background: #fff url(../images/camera-loader.gif) no-repeat center;
+  background: rgba(255, 255, 255, 0.9) url(../images/camera-loader.gif) no-repeat center;
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  border-radius: 18px;
+  height: 36px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 30%;
+  width: 36px;
+  z-index: 3;
+}
+
+/* line 121, ../style/sass/camera.scss */
+.camera_bar {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
+}
+
+/* line 130, ../style/sass/camera.scss */
+.camera_thumbs_wrap.camera_left .camera_bar, .camera_thumbs_wrap.camera_right .camera_bar {
+  height: 100%;
+  position: absolute;
+  width: auto;
+}
+
+/* line 135, ../style/sass/camera.scss */
+.camera_thumbs_wrap.camera_bottom .camera_bar, .camera_thumbs_wrap.camera_top .camera_bar {
+  height: auto;
+  position: absolute;
+  width: 100%;
+}
+
+/* line 140, ../style/sass/camera.scss */
+.camera_nav_cont {
+  height: 65px;
+  overflow: hidden;
+  position: absolute;
+  right: 9px;
+  top: 15px;
+  width: 120px;
+  z-index: 4;
+}
+
+/* line 149, ../style/sass/camera.scss */
+.camera_caption {
+  left: -20px;
+  top: 320px;
+  display: block;
+  position: absolute;
+}
+
+/* line 156, ../style/sass/camera.scss */
+.camera_caption > div {
+  padding: 10px 20px;
+}
+
+/* line 159, ../style/sass/camera.scss */
+.camerarelative {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 163, ../style/sass/camera.scss */
+.imgFake {
+  cursor: pointer;
+}
+
+/* line 166, ../style/sass/camera.scss */
+.camera_prevThumbs {
+  bottom: 4px;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  top: 4px;
+  visibility: hidden;
+  width: 30px;
+  z-index: 10;
+}
+
+/* line 176, ../style/sass/camera.scss */
+.camera_prevThumbs div {
+  background: url(../images/camera_skins.png) no-repeat -160px 0;
+  display: block;
+  height: 40px;
+  margin-top: -20px;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+}
+
+/* line 185, ../style/sass/camera.scss */
+.camera_nextThumbs {
+  bottom: 4px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 4px;
+  visibility: hidden;
+  width: 30px;
+  z-index: 10;
+}
+
+/* line 195, ../style/sass/camera.scss */
+.camera_nextThumbs div {
+  background: url(../images/camera_skins.png) no-repeat -190px 0;
+  display: block;
+  height: 40px;
+  margin-top: -20px;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+}
+
+/* line 204, ../style/sass/camera.scss */
+.camera_command_wrap .hideNav {
+  display: none;
+}
+
+/* line 207, ../style/sass/camera.scss */
+.camera_command_wrap {
+  left: 0;
+  position: relative;
+  right: 0;
+  z-index: 4;
+}
+
+/* line 213, ../style/sass/camera.scss */
+.camera_wrap .camera_pag .camera_pag_ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* line 219, ../style/sass/camera.scss */
+.camera_wrap .camera_pag .camera_pag_ul li {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  height: 10px !important;
+  margin: 30px 5px;
+  position: relative;
+  text-align: left;
+  text-indent: -9999px;
+  width: 10px !important;
+}
+
+/* line 232, ../style/sass/camera.scss */
+.camera_commands_emboss .camera_pag .camera_pag_ul li {
+  -moz-box-shadow: 0px 1px 0px white, inset 0px 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 0px white, inset 0px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 0px white, inset 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* line 243, ../style/sass/camera.scss */
+.camera_wrap .camera_pag .camera_pag_ul li > span {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  height: 10px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 10px;
+}
+
+/*.camera_commands_emboss .camera_pag .camera_pag_ul li:hover > span {
+	-moz-box-shadow:
+		0px 1px 0px rgba(255,255,255,1),
+		//inset 0px 1px 1px rgba(0,0,0,0.2);
+	-webkit-box-shadow:
+		0px 1px 0px rgba(255,255,255,1),
+		//inset 0px 1px 1px rgba(0,0,0,0.2);
+	box-shadow:
+		0px 1px 0px rgba(255,255,255,1),
+		//inset 0px 1px 1px rgba(0,0,0,0.2);
+}*/
+/* line 265, ../style/sass/camera.scss */
+.camera_wrap .camera_pag .camera_pag_ul li.cameracurrent > span {
+  -moz-box-shadow: 0;
+  -webkit-box-shadow: 0;
+  box-shadow: 0;
+}
+
+/* line 270, ../style/sass/camera.scss */
+.camera_pag_ul li img {
+  display: none;
+  position: absolute;
+}
+
+/* line 274, ../style/sass/camera.scss */
+.camera_pag_ul .thumb_arrow {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid;
+  top: 0;
+  left: 50%;
+  position: absolute;
+}
+
+/* line 283, ../style/sass/camera.scss */
+.camera_prev, .camera_next, .camera_commands {
+  cursor: pointer;
+  height: 40px;
+  margin-top: -20px;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  z-index: 2;
+}
+
+/* line 292, ../style/sass/camera.scss */
+.camera_prev {
+  left: 0;
+}
+
+/* line 295, ../style/sass/camera.scss */
+.camera_prev > span {
+  background: url(../images/camera_skins.png) no-repeat 0 0;
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+/* line 301, ../style/sass/camera.scss */
+.camera_next {
+  right: 0;
+}
+
+/* line 304, ../style/sass/camera.scss */
+.camera_next > span {
+  background: url(../images/camera_skins.png) no-repeat -40px 0;
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+/* line 310, ../style/sass/camera.scss */
+.camera_commands {
+  right: 41px;
+}
+
+/* line 313, ../style/sass/camera.scss */
+.camera_commands > .camera_play {
+  background: url(../images/camera_skins.png) no-repeat -80px 0;
+  height: 40px;
+  width: 40px;
+}
+
+/* line 318, ../style/sass/camera.scss */
+.camera_commands > .camera_stop {
+  background: url(../images/camera_skins.png) no-repeat -120px 0;
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+/* line 324, ../style/sass/camera.scss */
+.camera_wrap .camera_pag .camera_pag_ul li {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  height: 16px;
+  margin: 30px 5px;
+  position: relative;
+  text-indent: -9999px;
+  width: 16px;
+}
+
+/* line 336, ../style/sass/camera.scss */
+.camera_thumbs_cont {
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* line 347, ../style/sass/camera.scss */
+.camera_commands_emboss .camera_thumbs_cont {
+  -moz-box-shadow: 0px 1px 0px white, inset 0px 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 0px white, inset 0px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 0px white, inset 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* line 358, ../style/sass/camera.scss */
+.camera_thumbs_cont > div {
+  float: left;
+  width: 100%;
+}
+
+/* line 362, ../style/sass/camera.scss */
+.camera_thumbs_cont ul {
+  overflow: hidden;
+  padding: 3px 4px 8px;
+  position: relative;
+  text-align: center;
+}
+
+/* line 368, ../style/sass/camera.scss */
+.camera_thumbs_cont ul li {
+  display: inline;
+  padding: 0 4px;
+}
+
+/* line 372, ../style/sass/camera.scss */
+.camera_thumbs_cont ul li > img {
+  border: 1px solid;
+  cursor: pointer;
+  margin-top: 5px;
+  vertical-align: bottom;
+}
+
+/* line 378, ../style/sass/camera.scss */
+.camera_clear {
+  display: block;
+  clear: both;
+}
+
+/* line 382, ../style/sass/camera.scss */
+.showIt {
+  display: none;
+}
+
+/* line 385, ../style/sass/camera.scss */
+.camera_clear {
+  clear: both;
+  display: block;
+  height: 1px;
+  margin: -1px 0 25px;
+  position: relative;
+}
+
+/**************************
+*
+*	COLORS & SKINS
+*
+**************************/
+/* line 397, ../style/sass/camera.scss */
+.pattern_1 .camera_overlayer {
+  background: url(../images/patterns/overlay1.png) repeat;
+}
+
+/* line 400, ../style/sass/camera.scss */
+.pattern_2 .camera_overlayer {
+  background: url(../images/patterns/overlay2.png) repeat;
+}
+
+/* line 403, ../style/sass/camera.scss */
+.pattern_3 .camera_overlayer {
+  background: url(../images/patterns/overlay3.png) repeat;
+}
+
+/* line 406, ../style/sass/camera.scss */
+.pattern_4 .camera_overlayer {
+  background: url(../images/patterns/overlay4.png) repeat;
+}
+
+/* line 409, ../style/sass/camera.scss */
+.pattern_5 .camera_overlayer {
+  background: url(../images/patterns/overlay5.png) repeat;
+}
+
+/* line 412, ../style/sass/camera.scss */
+.pattern_6 .camera_overlayer {
+  background: url(../images/patterns/overlay6.png) repeat;
+}
+
+/* line 415, ../style/sass/camera.scss */
+.pattern_7 .camera_overlayer {
+  background: url(../images/patterns/overlay7.png) repeat;
+}
+
+/* line 418, ../style/sass/camera.scss */
+.pattern_8 .camera_overlayer {
+  background: url(../images/patterns/overlay8.png) repeat;
+}
+
+/* line 421, ../style/sass/camera.scss */
+.pattern_9 .camera_overlayer {
+  background: url(../images/patterns/overlay9.png) repeat;
+}
+
+/* line 424, ../style/sass/camera.scss */
+.pattern_10 .camera_overlayer {
+  background: url(../images/patterns/overlay10.png) repeat;
+}
+
+/* line 427, ../style/sass/camera.scss */
+.camera_caption {
+  color: #fff;
+}
+
+/* line 430, ../style/sass/camera.scss */
+.camera_caption > div {
+  margin-top: -250px;
+}
+
+/* line 435, ../style/sass/camera.scss */
+.camera_wrap .camera_pag .camera_pag_ul li {
+  background: #796c69;
+}
+
+/* line 438, ../style/sass/camera.scss */
+.camera_wrap .camera_pag .camera_pag_ul li:hover > span {
+  background: #796c69;
+}
+
+/* line 441, ../style/sass/camera.scss */
+.camera_wrap .camera_pag .camera_pag_ul li.cameracurrent > span {
+  background: #fff;
+}
+
+/* line 444, ../style/sass/camera.scss */
+.camera_pag_ul li img {
+  border: 4px solid #e6e6e6;
+  -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* line 450, ../style/sass/camera.scss */
+.camera_pag_ul .thumb_arrow {
+  border-top-color: #e6e6e6;
+}
+
+/* line 453, ../style/sass/camera.scss */
+.camera_pag {
+  margin-top: -149px;
+}
+
+/* line 460, ../style/sass/camera.scss */
+.camera_wrap .camera_pag .camera_pag_ul li {
+  background: #b7b7b7;
+}
+
+/* line 463, ../style/sass/camera.scss */
+.camera_thumbs_cont ul li > img {
+  border-color: 1px solid #000;
+}
+
+/*AMBER SKIN*/
+/* line 467, ../style/sass/camera.scss */
+.camera_amber_skin .camera_prevThumbs div {
+  background-position: -160px -160px;
+}
+
+/* line 470, ../style/sass/camera.scss */
+.camera_amber_skin .camera_nextThumbs div {
+  background-position: -190px -160px;
+}
+
+/* line 473, ../style/sass/camera.scss */
+.camera_amber_skin .camera_prev > span {
+  background-position: 0 -160px;
+}
+
+/* line 476, ../style/sass/camera.scss */
+.camera_amber_skin .camera_next > span {
+  background-position: -40px -160px;
+}
+
+/* line 479, ../style/sass/camera.scss */
+.camera_amber_skin .camera_commands > .camera_play {
+  background-position: -80px -160px;
+}
+
+/* line 482, ../style/sass/camera.scss */
+.camera_amber_skin .camera_commands > .camera_stop {
+  background-position: -120px -160px;
+}
+
+/*ASH SKIN*/
+/* line 486, ../style/sass/camera.scss */
+.camera_ash_skin .camera_prevThumbs div {
+  background-position: -160px -200px;
+}
+
+/* line 489, ../style/sass/camera.scss */
+.camera_ash_skin .camera_nextThumbs div {
+  background-position: -190px -200px;
+}
+
+/* line 492, ../style/sass/camera.scss */
+.camera_ash_skin .camera_prev > span {
+  background-position: 0 -200px;
+}
+
+/* line 495, ../style/sass/camera.scss */
+.camera_ash_skin .camera_next > span {
+  background-position: -40px -200px;
+}
+
+/* line 498, ../style/sass/camera.scss */
+.camera_ash_skin .camera_commands > .camera_play {
+  background-position: -80px -200px;
+}
+
+/* line 501, ../style/sass/camera.scss */
+.camera_ash_skin .camera_commands > .camera_stop {
+  background-position: -120px -200px;
+}
+
+/*AZURE SKIN*/
+/* line 505, ../style/sass/camera.scss */
+.camera_azure_skin .camera_prevThumbs div {
+  background-position: -160px -240px;
+}
+
+/* line 508, ../style/sass/camera.scss */
+.camera_azure_skin .camera_nextThumbs div {
+  background-position: -190px -240px;
+}
+
+/* line 511, ../style/sass/camera.scss */
+.camera_azure_skin .camera_prev > span {
+  background-position: 0 -240px;
+}
+
+/* line 514, ../style/sass/camera.scss */
+.camera_azure_skin .camera_next > span {
+  background-position: -40px -240px;
+}
+
+/* line 517, ../style/sass/camera.scss */
+.camera_azure_skin .camera_commands > .camera_play {
+  background-position: -80px -240px;
+}
+
+/* line 520, ../style/sass/camera.scss */
+.camera_azure_skin .camera_commands > .camera_stop {
+  background-position: -120px -240px;
+}
+
+/*BEIGE SKIN*/
+/* line 524, ../style/sass/camera.scss */
+.camera_beige_skin .camera_prevThumbs div {
+  background-position: -160px -120px;
+}
+
+/* line 527, ../style/sass/camera.scss */
+.camera_beige_skin .camera_nextThumbs div {
+  background-position: -190px -120px;
+}
+
+/* line 530, ../style/sass/camera.scss */
+.camera_beige_skin .camera_prev > span {
+  background-position: 0 -120px;
+}
+
+/* line 533, ../style/sass/camera.scss */
+.camera_beige_skin .camera_next > span {
+  background-position: -40px -120px;
+}
+
+/* line 536, ../style/sass/camera.scss */
+.camera_beige_skin .camera_commands > .camera_play {
+  background-position: -80px -120px;
+}
+
+/* line 539, ../style/sass/camera.scss */
+.camera_beige_skin .camera_commands > .camera_stop {
+  background-position: -120px -120px;
+}
+
+/*BLACK SKIN*/
+/* line 543, ../style/sass/camera.scss */
+.camera_black_skin .camera_prevThumbs div {
+  background-position: -160px -40px;
+}
+
+/* line 546, ../style/sass/camera.scss */
+.camera_black_skin .camera_nextThumbs div {
+  background-position: -190px -40px;
+}
+
+/* line 549, ../style/sass/camera.scss */
+.camera_black_skin .camera_prev > span {
+  background-position: 0 -40px;
+}
+
+/* line 552, ../style/sass/camera.scss */
+.camera_black_skin .camera_next > span {
+  background-position: -40px -40px;
+}
+
+/* line 555, ../style/sass/camera.scss */
+.camera_black_skin .camera_commands > .camera_play {
+  background-position: -80px -40px;
+}
+
+/* line 558, ../style/sass/camera.scss */
+.camera_black_skin .camera_commands > .camera_stop {
+  background-position: -120px -40px;
+}
+
+/*BLUE SKIN*/
+/* line 562, ../style/sass/camera.scss */
+.camera_blue_skin .camera_prevThumbs div {
+  background-position: -160px -280px;
+}
+
+/* line 565, ../style/sass/camera.scss */
+.camera_blue_skin .camera_nextThumbs div {
+  background-position: -190px -280px;
+}
+
+/* line 568, ../style/sass/camera.scss */
+.camera_blue_skin .camera_prev > span {
+  background-position: 0 -280px;
+}
+
+/* line 571, ../style/sass/camera.scss */
+.camera_blue_skin .camera_next > span {
+  background-position: -40px -280px;
+}
+
+/* line 574, ../style/sass/camera.scss */
+.camera_blue_skin .camera_commands > .camera_play {
+  background-position: -80px -280px;
+}
+
+/* line 577, ../style/sass/camera.scss */
+.camera_blue_skin .camera_commands > .camera_stop {
+  background-position: -120px -280px;
+}
+
+/*BROWN SKIN*/
+/* line 581, ../style/sass/camera.scss */
+.camera_brown_skin .camera_prevThumbs div {
+  background-position: -160px -320px;
+}
+
+/* line 584, ../style/sass/camera.scss */
+.camera_brown_skin .camera_nextThumbs div {
+  background-position: -190px -320px;
+}
+
+/* line 587, ../style/sass/camera.scss */
+.camera_brown_skin .camera_prev > span {
+  background-position: 0 -320px;
+}
+
+/* line 590, ../style/sass/camera.scss */
+.camera_brown_skin .camera_next > span {
+  background-position: -40px -320px;
+}
+
+/* line 593, ../style/sass/camera.scss */
+.camera_brown_skin .camera_commands > .camera_play {
+  background-position: -80px -320px;
+}
+
+/* line 596, ../style/sass/camera.scss */
+.camera_brown_skin .camera_commands > .camera_stop {
+  background-position: -120px -320px;
+}
+
+/*BURGUNDY SKIN*/
+/* line 600, ../style/sass/camera.scss */
+.camera_burgundy_skin .camera_prevThumbs div {
+  background-position: -160px -360px;
+}
+
+/* line 603, ../style/sass/camera.scss */
+.camera_burgundy_skin .camera_nextThumbs div {
+  background-position: -190px -360px;
+}
+
+/* line 606, ../style/sass/camera.scss */
+.camera_burgundy_skin .camera_prev > span {
+  background-position: 0 -360px;
+}
+
+/* line 609, ../style/sass/camera.scss */
+.camera_burgundy_skin .camera_next > span {
+  background-position: -40px -360px;
+}
+
+/* line 612, ../style/sass/camera.scss */
+.camera_burgundy_skin .camera_commands > .camera_play {
+  background-position: -80px -360px;
+}
+
+/* line 615, ../style/sass/camera.scss */
+.camera_burgundy_skin .camera_commands > .camera_stop {
+  background-position: -120px -360px;
+}
+
+/*CHARCOAL SKIN*/
+/* line 619, ../style/sass/camera.scss */
+.camera_charcoal_skin .camera_prevThumbs div {
+  background-position: -160px -400px;
+}
+
+/* line 622, ../style/sass/camera.scss */
+.camera_charcoal_skin .camera_nextThumbs div {
+  background-position: -190px -400px;
+}
+
+/* line 625, ../style/sass/camera.scss */
+.camera_charcoal_skin .camera_prev > span {
+  background-position: 0 -400px;
+}
+
+/* line 628, ../style/sass/camera.scss */
+.camera_charcoal_skin .camera_next > span {
+  background-position: -40px -400px;
+}
+
+/* line 631, ../style/sass/camera.scss */
+.camera_charcoal_skin .camera_commands > .camera_play {
+  background-position: -80px -400px;
+}
+
+/* line 634, ../style/sass/camera.scss */
+.camera_charcoal_skin .camera_commands > .camera_stop {
+  background-position: -120px -400px;
+}
+
+/*CHOCOLATE SKIN*/
+/* line 638, ../style/sass/camera.scss */
+.camera_chocolate_skin .camera_prevThumbs div {
+  background-position: -160px -440px;
+}
+
+/* line 641, ../style/sass/camera.scss */
+.camera_chocolate_skin .camera_nextThumbs div {
+  background-position: -190px -440px;
+}
+
+/* line 644, ../style/sass/camera.scss */
+.camera_chocolate_skin .camera_prev > span {
+  background-position: 0 -440px;
+}
+
+/* line 647, ../style/sass/camera.scss */
+.camera_chocolate_skin .camera_next > span {
+  background-position: -40px -440px;
+}
+
+/* line 650, ../style/sass/camera.scss */
+.camera_chocolate_skin .camera_commands > .camera_play {
+  background-position: -80px -440px;
+}
+
+/* line 653, ../style/sass/camera.scss */
+.camera_chocolate_skin .camera_commands > .camera_stop {
+  background-position: -120px -440px;
+}
+
+/*COFFEE SKIN*/
+/* line 657, ../style/sass/camera.scss */
+.camera_coffee_skin .camera_prevThumbs div {
+  background-position: -160px -480px;
+}
+
+/* line 660, ../style/sass/camera.scss */
+.camera_coffee_skin .camera_nextThumbs div {
+  background-position: -190px -480px;
+}
+
+/* line 663, ../style/sass/camera.scss */
+.camera_coffee_skin .camera_prev > span {
+  background-position: 0 -480px;
+}
+
+/* line 666, ../style/sass/camera.scss */
+.camera_coffee_skin .camera_next > span {
+  background-position: -40px -480px;
+}
+
+/* line 669, ../style/sass/camera.scss */
+.camera_coffee_skin .camera_commands > .camera_play {
+  background-position: -80px -480px;
+}
+
+/* line 672, ../style/sass/camera.scss */
+.camera_coffee_skin .camera_commands > .camera_stop {
+  background-position: -120px -480px;
+}
+
+/*CYAN SKIN*/
+/* line 676, ../style/sass/camera.scss */
+.camera_cyan_skin .camera_prevThumbs div {
+  background-position: -160px -520px;
+}
+
+/* line 679, ../style/sass/camera.scss */
+.camera_cyan_skin .camera_nextThumbs div {
+  background-position: -190px -520px;
+}
+
+/* line 682, ../style/sass/camera.scss */
+.camera_cyan_skin .camera_prev > span {
+  background-position: 0 -520px;
+}
+
+/* line 685, ../style/sass/camera.scss */
+.camera_cyan_skin .camera_next > span {
+  background-position: -40px -520px;
+}
+
+/* line 688, ../style/sass/camera.scss */
+.camera_cyan_skin .camera_commands > .camera_play {
+  background-position: -80px -520px;
+}
+
+/* line 691, ../style/sass/camera.scss */
+.camera_cyan_skin .camera_commands > .camera_stop {
+  background-position: -120px -520px;
+}
+
+/*FUCHSIA SKIN*/
+/* line 695, ../style/sass/camera.scss */
+.camera_fuchsia_skin .camera_prevThumbs div {
+  background-position: -160px -560px;
+}
+
+/* line 698, ../style/sass/camera.scss */
+.camera_fuchsia_skin .camera_nextThumbs div {
+  background-position: -190px -560px;
+}
+
+/* line 701, ../style/sass/camera.scss */
+.camera_fuchsia_skin .camera_prev > span {
+  background-position: 0 -560px;
+}
+
+/* line 704, ../style/sass/camera.scss */
+.camera_fuchsia_skin .camera_next > span {
+  background-position: -40px -560px;
+}
+
+/* line 707, ../style/sass/camera.scss */
+.camera_fuchsia_skin .camera_commands > .camera_play {
+  background-position: -80px -560px;
+}
+
+/* line 710, ../style/sass/camera.scss */
+.camera_fuchsia_skin .camera_commands > .camera_stop {
+  background-position: -120px -560px;
+}
+
+/*GOLD SKIN*/
+/* line 714, ../style/sass/camera.scss */
+.camera_gold_skin .camera_prevThumbs div {
+  background-position: -160px -600px;
+}
+
+/* line 717, ../style/sass/camera.scss */
+.camera_gold_skin .camera_nextThumbs div {
+  background-position: -190px -600px;
+}
+
+/* line 720, ../style/sass/camera.scss */
+.camera_gold_skin .camera_prev > span {
+  background-position: 0 -600px;
+}
+
+/* line 723, ../style/sass/camera.scss */
+.camera_gold_skin .camera_next > span {
+  background-position: -40px -600px;
+}
+
+/* line 726, ../style/sass/camera.scss */
+.camera_gold_skin .camera_commands > .camera_play {
+  background-position: -80px -600px;
+}
+
+/* line 729, ../style/sass/camera.scss */
+.camera_gold_skin .camera_commands > .camera_stop {
+  background-position: -120px -600px;
+}
+
+/*GREEN SKIN*/
+/* line 733, ../style/sass/camera.scss */
+.camera_green_skin .camera_prevThumbs div {
+  background-position: -160px -640px;
+}
+
+/* line 736, ../style/sass/camera.scss */
+.camera_green_skin .camera_nextThumbs div {
+  background-position: -190px -640px;
+}
+
+/* line 739, ../style/sass/camera.scss */
+.camera_green_skin .camera_prev > span {
+  background-position: 0 -640px;
+}
+
+/* line 742, ../style/sass/camera.scss */
+.camera_green_skin .camera_next > span {
+  background-position: -40px -640px;
+}
+
+/* line 745, ../style/sass/camera.scss */
+.camera_green_skin .camera_commands > .camera_play {
+  background-position: -80px -640px;
+}
+
+/* line 748, ../style/sass/camera.scss */
+.camera_green_skin .camera_commands > .camera_stop {
+  background-position: -120px -640px;
+}
+
+/*GREY SKIN*/
+/* line 752, ../style/sass/camera.scss */
+.camera_grey_skin .camera_prevThumbs div {
+  background-position: -160px -680px;
+}
+
+/* line 755, ../style/sass/camera.scss */
+.camera_grey_skin .camera_nextThumbs div {
+  background-position: -190px -680px;
+}
+
+/* line 758, ../style/sass/camera.scss */
+.camera_grey_skin .camera_prev > span {
+  background-position: 0 -680px;
+}
+
+/* line 761, ../style/sass/camera.scss */
+.camera_grey_skin .camera_next > span {
+  background-position: -40px -680px;
+}
+
+/* line 764, ../style/sass/camera.scss */
+.camera_grey_skin .camera_commands > .camera_play {
+  background-position: -80px -680px;
+}
+
+/* line 767, ../style/sass/camera.scss */
+.camera_grey_skin .camera_commands > .camera_stop {
+  background-position: -120px -680px;
+}
+
+/*INDIGO SKIN*/
+/* line 771, ../style/sass/camera.scss */
+.camera_indigo_skin .camera_prevThumbs div {
+  background-position: -160px -720px;
+}
+
+/* line 774, ../style/sass/camera.scss */
+.camera_indigo_skin .camera_nextThumbs div {
+  background-position: -190px -720px;
+}
+
+/* line 777, ../style/sass/camera.scss */
+.camera_indigo_skin .camera_prev > span {
+  background-position: 0 -720px;
+}
+
+/* line 780, ../style/sass/camera.scss */
+.camera_indigo_skin .camera_next > span {
+  background-position: -40px -720px;
+}
+
+/* line 783, ../style/sass/camera.scss */
+.camera_indigo_skin .camera_commands > .camera_play {
+  background-position: -80px -720px;
+}
+
+/* line 786, ../style/sass/camera.scss */
+.camera_indigo_skin .camera_commands > .camera_stop {
+  background-position: -120px -720px;
+}
+
+/*KHAKI SKIN*/
+/* line 790, ../style/sass/camera.scss */
+.camera_khaki_skin .camera_prevThumbs div {
+  background-position: -160px -760px;
+}
+
+/* line 793, ../style/sass/camera.scss */
+.camera_khaki_skin .camera_nextThumbs div {
+  background-position: -190px -760px;
+}
+
+/* line 796, ../style/sass/camera.scss */
+.camera_khaki_skin .camera_prev > span {
+  background-position: 0 -760px;
+}
+
+/* line 799, ../style/sass/camera.scss */
+.camera_khaki_skin .camera_next > span {
+  background-position: -40px -760px;
+}
+
+/* line 802, ../style/sass/camera.scss */
+.camera_khaki_skin .camera_commands > .camera_play {
+  background-position: -80px -760px;
+}
+
+/* line 805, ../style/sass/camera.scss */
+.camera_khaki_skin .camera_commands > .camera_stop {
+  background-position: -120px -760px;
+}
+
+/*LIME SKIN*/
+/* line 809, ../style/sass/camera.scss */
+.camera_lime_skin .camera_prevThumbs div {
+  background-position: -160px -800px;
+}
+
+/* line 812, ../style/sass/camera.scss */
+.camera_lime_skin .camera_nextThumbs div {
+  background-position: -190px -800px;
+}
+
+/* line 815, ../style/sass/camera.scss */
+.camera_lime_skin .camera_prev > span {
+  background-position: 0 -800px;
+}
+
+/* line 818, ../style/sass/camera.scss */
+.camera_lime_skin .camera_next > span {
+  background-position: -40px -800px;
+}
+
+/* line 821, ../style/sass/camera.scss */
+.camera_lime_skin .camera_commands > .camera_play {
+  background-position: -80px -800px;
+}
+
+/* line 824, ../style/sass/camera.scss */
+.camera_lime_skin .camera_commands > .camera_stop {
+  background-position: -120px -800px;
+}
+
+/*MAGENTA SKIN*/
+/* line 828, ../style/sass/camera.scss */
+.camera_magenta_skin .camera_prevThumbs div {
+  background-position: -160px -840px;
+}
+
+/* line 831, ../style/sass/camera.scss */
+.camera_magenta_skin .camera_nextThumbs div {
+  background-position: -190px -840px;
+}
+
+/* line 834, ../style/sass/camera.scss */
+.camera_magenta_skin .camera_prev > span {
+  background-position: 0 -840px;
+}
+
+/* line 837, ../style/sass/camera.scss */
+.camera_magenta_skin .camera_next > span {
+  background-position: -40px -840px;
+}
+
+/* line 840, ../style/sass/camera.scss */
+.camera_magenta_skin .camera_commands > .camera_play {
+  background-position: -80px -840px;
+}
+
+/* line 843, ../style/sass/camera.scss */
+.camera_magenta_skin .camera_commands > .camera_stop {
+  background-position: -120px -840px;
+}
+
+/*MAROON SKIN*/
+/* line 847, ../style/sass/camera.scss */
+.camera_maroon_skin .camera_prevThumbs div {
+  background-position: -160px -880px;
+}
+
+/* line 850, ../style/sass/camera.scss */
+.camera_maroon_skin .camera_nextThumbs div {
+  background-position: -190px -880px;
+}
+
+/* line 853, ../style/sass/camera.scss */
+.camera_maroon_skin .camera_prev > span {
+  background-position: 0 -880px;
+}
+
+/* line 856, ../style/sass/camera.scss */
+.camera_maroon_skin .camera_next > span {
+  background-position: -40px -880px;
+}
+
+/* line 859, ../style/sass/camera.scss */
+.camera_maroon_skin .camera_commands > .camera_play {
+  background-position: -80px -880px;
+}
+
+/* line 862, ../style/sass/camera.scss */
+.camera_maroon_skin .camera_commands > .camera_stop {
+  background-position: -120px -880px;
+}
+
+/*ORANGE SKIN*/
+/* line 866, ../style/sass/camera.scss */
+.camera_orange_skin .camera_prevThumbs div {
+  background-position: -160px -920px;
+}
+
+/* line 869, ../style/sass/camera.scss */
+.camera_orange_skin .camera_nextThumbs div {
+  background-position: -190px -920px;
+}
+
+/* line 872, ../style/sass/camera.scss */
+.camera_orange_skin .camera_prev > span {
+  background-position: 0 -920px;
+}
+
+/* line 875, ../style/sass/camera.scss */
+.camera_orange_skin .camera_next > span {
+  background-position: -40px -920px;
+}
+
+/* line 878, ../style/sass/camera.scss */
+.camera_orange_skin .camera_commands > .camera_play {
+  background-position: -80px -920px;
+}
+
+/* line 881, ../style/sass/camera.scss */
+.camera_orange_skin .camera_commands > .camera_stop {
+  background-position: -120px -920px;
+}
+
+/*OLIVE SKIN*/
+/* line 885, ../style/sass/camera.scss */
+.camera_olive_skin .camera_prevThumbs div {
+  background-position: -160px -1080px;
+}
+
+/* line 888, ../style/sass/camera.scss */
+.camera_olive_skin .camera_nextThumbs div {
+  background-position: -190px -1080px;
+}
+
+/* line 891, ../style/sass/camera.scss */
+.camera_olive_skin .camera_prev > span {
+  background-position: 0 -1080px;
+}
+
+/* line 894, ../style/sass/camera.scss */
+.camera_olive_skin .camera_next > span {
+  background-position: -40px -1080px;
+}
+
+/* line 897, ../style/sass/camera.scss */
+.camera_olive_skin .camera_commands > .camera_play {
+  background-position: -80px -1080px;
+}
+
+/* line 900, ../style/sass/camera.scss */
+.camera_olive_skin .camera_commands > .camera_stop {
+  background-position: -120px -1080px;
+}
+
+/*PINK SKIN*/
+/* line 904, ../style/sass/camera.scss */
+.camera_pink_skin .camera_prevThumbs div {
+  background-position: -160px -960px;
+}
+
+/* line 907, ../style/sass/camera.scss */
+.camera_pink_skin .camera_nextThumbs div {
+  background-position: -190px -960px;
+}
+
+/* line 910, ../style/sass/camera.scss */
+.camera_pink_skin .camera_prev > span {
+  background-position: 0 -960px;
+}
+
+/* line 913, ../style/sass/camera.scss */
+.camera_pink_skin .camera_next > span {
+  background-position: -40px -960px;
+}
+
+/* line 916, ../style/sass/camera.scss */
+.camera_pink_skin .camera_commands > .camera_play {
+  background-position: -80px -960px;
+}
+
+/* line 919, ../style/sass/camera.scss */
+.camera_pink_skin .camera_commands > .camera_stop {
+  background-position: -120px -960px;
+}
+
+/*PISTACHIO SKIN*/
+/* line 923, ../style/sass/camera.scss */
+.camera_pistachio_skin .camera_prevThumbs div {
+  background-position: -160px -1040px;
+}
+
+/* line 926, ../style/sass/camera.scss */
+.camera_pistachio_skin .camera_nextThumbs div {
+  background-position: -190px -1040px;
+}
+
+/* line 929, ../style/sass/camera.scss */
+.camera_pistachio_skin .camera_prev > span {
+  background-position: 0 -1040px;
+}
+
+/* line 932, ../style/sass/camera.scss */
+.camera_pistachio_skin .camera_next > span {
+  background-position: -40px -1040px;
+}
+
+/* line 935, ../style/sass/camera.scss */
+.camera_pistachio_skin .camera_commands > .camera_play {
+  background-position: -80px -1040px;
+}
+
+/* line 938, ../style/sass/camera.scss */
+.camera_pistachio_skin .camera_commands > .camera_stop {
+  background-position: -120px -1040px;
+}
+
+/*PINK SKIN*/
+/* line 942, ../style/sass/camera.scss */
+.camera_pink_skin .camera_prevThumbs div {
+  background-position: -160px -80px;
+}
+
+/* line 945, ../style/sass/camera.scss */
+.camera_pink_skin .camera_nextThumbs div {
+  background-position: -190px -80px;
+}
+
+/* line 948, ../style/sass/camera.scss */
+.camera_pink_skin .camera_prev > span {
+  background-position: 0 -80px;
+}
+
+/* line 951, ../style/sass/camera.scss */
+.camera_pink_skin .camera_next > span {
+  background-position: -40px -80px;
+}
+
+/* line 954, ../style/sass/camera.scss */
+.camera_pink_skin .camera_commands > .camera_play {
+  background-position: -80px -80px;
+}
+
+/* line 957, ../style/sass/camera.scss */
+.camera_pink_skin .camera_commands > .camera_stop {
+  background-position: -120px -80px;
+}
+
+/*RED SKIN*/
+/* line 961, ../style/sass/camera.scss */
+.camera_red_skin .camera_prevThumbs div {
+  background-position: -160px -1000px;
+}
+
+/* line 964, ../style/sass/camera.scss */
+.camera_red_skin .camera_nextThumbs div {
+  background-position: -190px -1000px;
+}
+
+/* line 967, ../style/sass/camera.scss */
+.camera_red_skin .camera_prev > span {
+  background-position: 0 -1000px;
+}
+
+/* line 970, ../style/sass/camera.scss */
+.camera_red_skin .camera_next > span {
+  background-position: -40px -1000px;
+}
+
+/* line 973, ../style/sass/camera.scss */
+.camera_red_skin .camera_commands > .camera_play {
+  background-position: -80px -1000px;
+}
+
+/* line 976, ../style/sass/camera.scss */
+.camera_red_skin .camera_commands > .camera_stop {
+  background-position: -120px -1000px;
+}
+
+/*TANGERINE SKIN*/
+/* line 980, ../style/sass/camera.scss */
+.camera_tangerine_skin .camera_prevThumbs div {
+  background-position: -160px -1120px;
+}
+
+/* line 983, ../style/sass/camera.scss */
+.camera_tangerine_skin .camera_nextThumbs div {
+  background-position: -190px -1120px;
+}
+
+/* line 986, ../style/sass/camera.scss */
+.camera_tangerine_skin .camera_prev > span {
+  background-position: 0 -1120px;
+}
+
+/* line 989, ../style/sass/camera.scss */
+.camera_tangerine_skin .camera_next > span {
+  background-position: -40px -1120px;
+}
+
+/* line 992, ../style/sass/camera.scss */
+.camera_tangerine_skin .camera_commands > .camera_play {
+  background-position: -80px -1120px;
+}
+
+/* line 995, ../style/sass/camera.scss */
+.camera_tangerine_skin .camera_commands > .camera_stop {
+  background-position: -120px -1120px;
+}
+
+/*TURQUOISE SKIN*/
+/* line 999, ../style/sass/camera.scss */
+.camera_turquoise_skin .camera_prevThumbs div {
+  background-position: -160px -1160px;
+}
+
+/* line 1002, ../style/sass/camera.scss */
+.camera_turquoise_skin .camera_nextThumbs div {
+  background-position: -190px -1160px;
+}
+
+/* line 1005, ../style/sass/camera.scss */
+.camera_turquoise_skin .camera_prev > span {
+  background-position: 0 -1160px;
+}
+
+/* line 1008, ../style/sass/camera.scss */
+.camera_turquoise_skin .camera_next > span {
+  background-position: -40px -1160px;
+}
+
+/* line 1011, ../style/sass/camera.scss */
+.camera_turquoise_skin .camera_commands > .camera_play {
+  background-position: -80px -1160px;
+}
+
+/* line 1014, ../style/sass/camera.scss */
+.camera_turquoise_skin .camera_commands > .camera_stop {
+  background-position: -120px -1160px;
+}
+
+/*VIOLET SKIN*/
+/* line 1018, ../style/sass/camera.scss */
+.camera_violet_skin .camera_prevThumbs div {
+  background-position: -160px -1200px;
+}
+
+/* line 1021, ../style/sass/camera.scss */
+.camera_violet_skin .camera_nextThumbs div {
+  background-position: -190px -1200px;
+}
+
+/* line 1024, ../style/sass/camera.scss */
+.camera_violet_skin .camera_prev > span {
+  background-position: 0 -1200px;
+}
+
+/* line 1027, ../style/sass/camera.scss */
+.camera_violet_skin .camera_next > span {
+  background-position: -40px -1200px;
+}
+
+/* line 1030, ../style/sass/camera.scss */
+.camera_violet_skin .camera_commands > .camera_play {
+  background-position: -80px -1200px;
+}
+
+/* line 1033, ../style/sass/camera.scss */
+.camera_violet_skin .camera_commands > .camera_stop {
+  background-position: -120px -1200px;
+}
+
+/*WHITE SKIN*/
+/* line 1037, ../style/sass/camera.scss */
+.camera_white_skin .camera_prevThumbs div {
+  background-position: -160px -80px;
+}
+
+/* line 1040, ../style/sass/camera.scss */
+.camera_white_skin .camera_nextThumbs div {
+  background-position: -190px -80px;
+}
+
+/* line 1043, ../style/sass/camera.scss */
+.camera_white_skin .camera_prev > span {
+  background-position: 0 -80px;
+}
+
+/* line 1046, ../style/sass/camera.scss */
+.camera_white_skin .camera_next > span {
+  background-position: -40px -80px;
+}
+
+/* line 1049, ../style/sass/camera.scss */
+.camera_white_skin .camera_commands > .camera_play {
+  background-position: -80px -80px;
+}
+
+/* line 1052, ../style/sass/camera.scss */
+.camera_white_skin .camera_commands > .camera_stop {
+  background-position: -120px -80px;
+}
+
+/*YELLOW SKIN*/
+/* line 1056, ../style/sass/camera.scss */
+.camera_yellow_skin .camera_prevThumbs div {
+  background-position: -160px -1240px;
+}
+
+/* line 1059, ../style/sass/camera.scss */
+.camera_yellow_skin .camera_nextThumbs div {
+  background-position: -190px -1240px;
+}
+
+/* line 1062, ../style/sass/camera.scss */
+.camera_yellow_skin .camera_prev > span {
+  background-position: 0 -1240px;
+}
+
+/* line 1065, ../style/sass/camera.scss */
+.camera_yellow_skin .camera_next > span {
+  background-position: -40px -1240px;
+}
+
+/* line 1068, ../style/sass/camera.scss */
+.camera_yellow_skin .camera_commands > .camera_play {
+  background-position: -80px -1240px;
+}
+
+/* line 1071, ../style/sass/camera.scss */
+.camera_yellow_skin .camera_commands > .camera_stop {
+  background-position: -120px -1240px;
+}
