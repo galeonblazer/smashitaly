@@ -12,10 +12,7 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: 'style/sass/*.scss',
-        tasks: 'compass',
-        options: {
-          spawn: false,
-        }
+        tasks: 'compass'
       }
     }
   });
@@ -23,6 +20,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['compass']);
+  grunt.registerTask('default', ['compass','watch']);
 
 };
